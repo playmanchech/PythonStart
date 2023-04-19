@@ -1,0 +1,67 @@
+# x = 0
+# def setup():
+#   size(600,600)
+# def draw():
+#   global x
+#   background(100)
+#   triangle(300,300-x,300-x,300,300+x,300)
+#   x = x + 1
+  
+
+# x = 0
+# def setup():
+#   size(600,600)
+# def draw():
+#   global x
+#   stroke(random(0,255),random(0,255),random(0,255))
+#   fill(random(0,255),random(0,255),random(0,255))
+#   background(100)
+#   ellipse(300,300,700-x,700-x)
+#   x = x + 10
+
+
+
+# x = 0
+# def setup():
+#   size(600,600)
+# def draw():
+#   global x
+#   background(100)
+#   ellipse(0+x,0+x,20+x+x+x,20+x+x+x)
+#   x = x + 1
+
+
+x = 0
+y = 0
+q = 0
+a = 0
+def setup():
+  size(600,600)
+  rectMode(CENTER) 
+def draw():
+  global x
+  global y
+  global q
+  global a
+  background(100)
+  push()
+  fill(255,0,0)
+  rect(150,150,300-x,300-x)
+  pop()
+  push()
+  fill(0,255,0)
+  rect(150,450,300-y,300-y)
+  pop()
+  push()
+  fill(0,0,255)
+  rect(450,150,300-q,300-q)
+  pop()
+  push()
+  fill(255,255,0)
+  rect(450,450,300-a,300-a)
+  pop()
+  x = x + 1
+  y = y + 2
+  q = q + 3
+  a = a + 4
+  
