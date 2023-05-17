@@ -1,0 +1,66 @@
+x = 1
+def setup ():
+    size ( 800,650)
+    background(255)
+def draw ():
+    global x
+    fill (125)
+    textSize(20)
+    text(u"инструккция",10,390)
+    text(u"ПКМ стереть всё",10,410)
+    text(u"ЛКМ рисовать",10,430)
+    text(u"r красный",10,450)
+    text(u"j оранжевый",10,470)
+    text(u"ж жёлтый",10,490)
+    text(u"p зелёный",10,510)
+    text(u"u голубой",10,530)
+    text(u"c синий",10,550)
+    text(u"a фиолетовый",10,570)
+    text(u"x чёрный",10,590)
+    text(u"+ увеличить",10,610)
+    text(u"- уменьшить",10,630)
+    text(u"0 ластик",10,650)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            line(mouseX, mouseY, pmouseX, pmouseY)
+        if mouseButton == RIGHT:
+            background(255)
+    if keyPressed:
+        if key == '+':
+            global x
+            strokeWeight(x)
+            if x < 150:
+                x = x + 1
+    if keyPressed:
+        if key == '-':
+            global x
+            strokeWeight(x)
+            if x > 1:
+                x = x - 1
+    if keyPressed:
+        if key == 'r' or key == 'R' or key == 'к' or key == 'К':
+            stroke(255,0,0)
+    if keyPressed:
+        if key == 'j' or key == 'J' or key == 'о' or key == 'О':
+            stroke(255,125,0)
+    if keyPressed:
+        if key == ';' or key == 'ж' or key == 'Ж' or key == ':':
+            stroke(255,255,0)
+    if keyPressed:
+        if key == 'p' or key == 'P' or key == 'з' or key == 'З':
+            stroke(0,255,0)
+    if keyPressed:
+        if key == 'u' or key == 'U' or key == 'г' or key == 'Г':
+            stroke(0,255,255)
+    if keyPressed:
+        if key == 'c' or key == 'C' or key == 'с' or key == 'С':
+            stroke(0,0,255)
+    if keyPressed:
+        if key == 'a' or key == 'A' or key == 'ф' or key == 'Ф':
+            stroke(255,0,255)
+    if keyPressed:
+        if key == '0':
+            stroke(255,255,255)
+    if keyPressed:
+        if key == 'x' or key == 'X' or key == 'ч' or key == 'Ч':
+            stroke(0,0,0)
