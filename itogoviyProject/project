@@ -4,63 +4,100 @@ def setup ():
     background(255)
 def draw ():
     global x
-    fill (125)
-    textSize(20)
-    text(u"инструккция",10,390)
-    text(u"ПКМ стереть всё",10,410)
-    text(u"ЛКМ рисовать",10,430)
-    text(u"r красный",10,450)
-    text(u"j оранжевый",10,470)
-    text(u"ж жёлтый",10,490)
-    text(u"p зелёный",10,510)
-    text(u"u голубой",10,530)
-    text(u"c синий",10,550)
-    text(u"a фиолетовый",10,570)
-    text(u"x чёрный",10,590)
-    text(u"+ увеличить",10,610)
-    text(u"- уменьшить",10,630)
-    text(u"0 ластик",10,650)
+    push()
+    strokeWeight(1)
+    stroke(0)
+    fill(255,0,0)
+    rect(0,0,50,50)
+    fill(255,125,0)
+    rect(60,0,50,50)
+    fill(255,255,0)
+    rect(120,0,50,50)
+    fill(0,255,0)
+    rect(180,0,50,50)
+    fill(0,255,255)
+    rect(240,0,50,50)
+    fill(0,0,255)
+    rect(300,0,50,50)
+    fill(255,0,255)
+    rect(360,0,50,50)
+    stroke(255)
+    fill(0,0,0)
+    rect(420,0,50,50)
+    stroke(0)
+    fill(255,255,255)
+    rect(480,0,50,50)
+    fill(125)
+    textSize(15)
+    text(u"ластик",480,30)
+    fill(255,255,255)
+    rect(0,600,100,50)
+    fill(125)
+    textSize(15)
+    text(u"стереть всё",10,625)
+    fill(125,100,25)
+    rect(750,200,50,100)
+    fill(125,100,25)
+    rect(750,350,50,100)
+    fill(0)
+    rect(760,245,30,10)
+    rect(760,395,30,10)
+    rect(770,385,10,30)
+    pop()
     if mousePressed == True:    
         if mouseButton == LEFT:
             line(mouseX, mouseY, pmouseX, pmouseY)
-        if mouseButton == RIGHT:
-            background(255)
-    if keyPressed:
-        if key == '+':
-            global x
-            strokeWeight(x)
-            if x < 150:
-                x = x + 1
-    if keyPressed:
-        if key == '-':
-            global x
-            strokeWeight(x)
-            if x > 1:
-                x = x - 1
-    if keyPressed:
-        if key == 'r' or key == 'R' or key == 'к' or key == 'К':
-            stroke(255,0,0)
-    if keyPressed:
-        if key == 'j' or key == 'J' or key == 'о' or key == 'О':
-            stroke(255,125,0)
-    if keyPressed:
-        if key == ';' or key == 'ж' or key == 'Ж' or key == ':':
-            stroke(255,255,0)
-    if keyPressed:
-        if key == 'p' or key == 'P' or key == 'з' or key == 'З':
-            stroke(0,255,0)
-    if keyPressed:
-        if key == 'u' or key == 'U' or key == 'г' or key == 'Г':
-            stroke(0,255,255)
-    if keyPressed:
-        if key == 'c' or key == 'C' or key == 'с' or key == 'С':
-            stroke(0,0,255)
-    if keyPressed:
-        if key == 'a' or key == 'A' or key == 'ф' or key == 'Ф':
-            stroke(255,0,255)
-    if keyPressed:
-        if key == '0':
-            stroke(255,255,255)
-    if keyPressed:
-        if key == 'x' or key == 'X' or key == 'ч' or key == 'Ч':
-            stroke(0,0,0)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 0 and mouseX < 50 and mouseY > 0 and mouseY < 50:
+                stroke(255,0,0)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 60 and mouseX < 110 and mouseY > 0 and mouseY < 50:
+                stroke(255,125,0)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 120 and mouseX < 170 and mouseY > 0 and mouseY < 50:
+                stroke(255,255,0)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 180 and mouseX < 230 and mouseY > 0 and mouseY < 50:
+                stroke(0,255,0)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 240 and mouseX < 290 and mouseY > 0 and mouseY < 50:
+                stroke(0,255,255)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 300 and mouseX < 350 and mouseY > 0 and mouseY < 50:
+                stroke(0,0,255)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 360 and mouseX < 410 and mouseY > 0 and mouseY < 50:
+                stroke(255,0,255)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 420 and mouseX < 470 and mouseY > 0 and mouseY < 50:
+                stroke(0,0,0)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 480 and mouseX < 530 and mouseY > 0 and mouseY < 50:
+                stroke(255,255,255)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 0 and mouseX < 100 and mouseY > 600 and mouseY < 650:
+                background(255)
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 750 and mouseX < 800 and mouseY > 200 and mouseY < 300:
+                global x
+                strokeWeight(x)
+                if x > 1:
+                    x = x - 1
+    if mousePressed == True:    
+        if mouseButton == LEFT:
+            if mouseX > 750 and mouseX < 800 and mouseY > 350 and mouseY < 450:
+                global x
+                strokeWeight(x)
+                if x < 100:
+                    x = x + 1
